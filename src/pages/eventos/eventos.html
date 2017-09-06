@@ -1,0 +1,15 @@
+  
+<ion-content padding>
+        <ion-grid>
+                <ion-row>
+                    <ion-col col-md-12> 
+                            <div class="calendar-main">
+                                <!--<div id="calendar"></div> -->
+                                <p-schedule #fc [events]="events" [contentHeight]="auto" [aspectRatio]="0.8" [maxTime]="'20:00:00'" [minTime]="'05:00:00'"
+                                    [header]="header" [height]="sizealto" [eventLimit]="4" [defaultView]="vistadefecto" [editable]="true"
+                                    (onDayClick)="handleDayClick($event)" (onEventClick)="handleEventClick($event)"></p-schedule>
+                            </div> 
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+</ion-content>

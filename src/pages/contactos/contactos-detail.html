@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <ion-navbar>
+            <ion-buttons end>
+                <button ion-button outline color="danger" (click)="cerrarModal()">Cerrar</button>
+
+            </ion-buttons>
+            <ion-buttons start>
+                <ion-toggle *ngIf="!esNuevo" pTooltip="Habilitar edicion" [(ngModel)]="modificacionActiva"></ion-toggle>
+            </ion-buttons>
+            <ion-title>Contacto {{titulo}} </ion-title>
+
+        </ion-navbar>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-item>
+                <ion-label>Nombre</ion-label>
+                <ion-input  [(ngModel)]="nombre" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Cargo</ion-label>
+                <ion-input  [(ngModel)]="cargo" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Cliente</ion-label>
+                <ion-input  [(ngModel)]="cliente" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Tel.oficina</ion-label>
+                <ion-input  [(ngModel)]="tel" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Usuario</ion-label>
+                <ion-input  [(ngModel)]="usuario" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Direccion</ion-label>
+                <ion-input  [(ngModel)]="direccion" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <button ion-button outline (click)="save()" color="secondary" >Guardar</button>
+             </ion-item>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

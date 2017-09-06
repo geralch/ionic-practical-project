@@ -1,0 +1,35 @@
+<ion-content>
+  
+    <body class="login login-action-login wp-core-ui  locale-en-us">
+      <div id="login">
+  
+        <form name="loginform" id="loginform">
+          <img class="logo" src="assets/company_logo.png"
+            alt="">
+          <p>
+            <label for="user_login">Usuario<br />
+      <input type="text" name="log" id="user_login" [(ngModel)]='username' aria-describedby="login_error" class="input" value=""  requiered /></label>
+          </p>
+          <p>
+            <label for="user_pass">Contraseña<br />
+      <input type="password" name="pwd" id="user_pass" [(ngModel)]='password' aria-describedby="login_error" class="input" value=""  requiered/></label>
+          </p>
+          <p class="submit">
+            <input type="submit" (click)="login()" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Iniciar sesión" 
+            />
+          </p>
+          <p id="nav">
+            <a>¿Olvidaste tu contraseña?</a>
+          </p>
+        </form>
+        <br>
+        <p class="message" *ngIf="error">{{mensaje}}<br />
+        </p>
+  
+  
+      </div>
+  
+  
+      <div class="clear"></div>
+    </body>
+  </ion-content>

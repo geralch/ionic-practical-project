@@ -1,0 +1,75 @@
+<!--
+  Generated template for the GeralpruebaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding>
+    <ion-row>
+        <div class="col-md-6">
+            <div class="card" padding>
+                <div class="card-header card-header-icon" data-background-color="red">
+                    <i class="fa fa-paw" aria-hidden="true"></i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Cats
+                        <button class="btn btn-primary btn-fab btn-fab-mini btn-round btn-nuevo-listas ">
+                            <i class="fa fa-plus"></i></button>
+                    </h4>
+                    <div *ngFor="let cat of cats" class="col-md-2 cat">
+                        <button class="btn btn-primary btn-round" (click)="onSelect(cat)">{{cat.nombre}}
+                            <div class="ripple-container"></div></button>
+                        <span class="badge"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card" padding>
+                <div class="card-header card-header-icon" data-background-color="red">
+                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                </div>
+                <div *ngIf="selectedCat" class="card-content">
+                    <h4 class="card-title">Detalles de {{selectedCat.nombre}}
+                        <button class="btn btn-primary btn-fab btn-fab-mini btn-round btn-nuevo-listas " (click)="editCat(selectedCat)">
+                            <i class="fa fa-pencil"></i></button></h4>
+                    <div>
+                        <p>Genero: {{selectedCat.genero}} </p>
+                        <p>Color: {{selectedCat.color}} </p>
+                        <p>Edad: {{selectedCat.edad}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card" padding>
+                <div class="card-header card-header-icon" data-background-color="red">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </div>
+                <div *ngIf="selectedCatEdit" class="card-content">
+                    <h4 class="card-title">Edicion de {{selectedCatEdit.nombre}}
+                    </h4>
+                    <ion-item>
+                        <ion-label>Nombre</ion-label>
+                        <ion-input [(ngModel)]="selectedCatEdit.nombre" type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Genero</ion-label>
+                        <ion-input [(ngModel)]="selectedCatEdit.genero" type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Color</ion-label>
+                        <ion-input [(ngModel)]="selectedCatEdit.color" type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Edad</ion-label>
+                        <ion-input [(ngModel)]="selectedCatEdit.edad" type="text"></ion-input>
+                    </ion-item>
+                </div>
+            </div>
+        </div>
+    </ion-row>
+</ion-content>

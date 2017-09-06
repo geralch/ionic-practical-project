@@ -1,0 +1,153 @@
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-12 col-sm-12 col-md-6 col-lg-3>
+        <div class="card card-stats">
+          <div class="card-header" data-background-color="orange">
+            <i class="fa fa-calendar"></i>
+          </div>
+          <div class="card-content">
+            <p class="category">Eventos</p>
+            <h3 class="card-title">10</h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+              <a>Más detalles...</a>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+
+
+      <ion-col col-12 col-sm-12 col-md-6 col-lg-3>
+        <div class="card card-stats">
+          <div class="card-header" data-background-color="rose">
+            <i class="fa fa-address-card"></i>
+
+          </div>
+          <div class="card-content">
+            <p class="category">Contactos</p>
+            <h3 class="card-title">250</h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <i class="fa fa-user-plus" aria-hidden="true"></i> 10 Nuevos ultimo mes
+            </div>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col col-12 col-sm-12 col-md-6 col-lg-3>
+        <div class="card card-stats">
+          <div class="card-header" data-background-color="green">
+            <i class="fa fa-tasks"></i>
+          </div>
+          <div class="card-content">
+            <p class="category">Tareas</p>
+            <h3 class="card-title">10</h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i> 2 Completas
+            </div>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col col-12 col-sm-12 col-md-6 col-lg-3>
+        <div class="card card-stats">
+          <div class="card-header" data-background-color="blue">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          </div>
+          <div class="card-content">
+            <p class="category">Oportunidades</p>
+            <h3 class="card-title">+5</h3>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <i class="fa fa-sort-amount-asc" aria-hidden="true"></i> Más detalles...
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <!-- <ion-col col-12 col-sm-12 col-md-6 col-lg-4>
+        <div class="card card-product">
+          <div class="card-image" data-header-animation="true">
+            <a href="#pablo"> 
+              <img class="img" src="assets/img/card-1.jpeg"> 
+            
+            </a>
+          </div>
+          <div class="card-content">
+            <div class="card-actions"> 
+              <button type="button" class="btn btn-default btn-simple" data-placement="bottom" title="View">
+                <ion-icon name="paper"></ion-icon>
+                      </button>
+              <button type="button" class="btn btn-success btn-simple" data-placement="bottom" title="Edit">
+                <ion-icon name="brush"></ion-icon>
+                
+                      </button>
+              <button type="button" class="btn btn-danger btn-simple" data-placement="bottom" title="Remove">
+                <ion-icon name="close-circle"></ion-icon>
+                      </button>
+            </div>
+            <h4 class="card-title">
+              <a href="#pablo">Beautiful Castle</a>
+            </h4>
+            <div class="card-description">
+              The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night
+              life in Milan.
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="price">
+              <h4>$459/night</h4>
+            </div>
+            <div class="stats pull-right">
+              <p class="category">
+                <ion-icon name="pin"></ion-icon> Milan, Italy</p>
+            </div>
+          </div>
+        </div>
+      </ion-col> -->
+
+      <ion-col col-12 col-sm-12 col-md-8 col-lg-8>
+        <div class="card">
+          <div class="card-header card-header-icon" data-background-color="red">
+            <i class="fa fa-table" aria-hidden="true"></i>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">Oportunidades</h4>
+            <div class="table-responsive">
+              <p-dataTable #dt [value]="dataej" selectionMode="single" [responsive]="true" [(selection)]="usuarioSelected"  dataKey="id"> 
+                <p-column field="name" header="Nombre " [sortable]="true"></p-column>
+                <p-column field="registered" header="Fecha " [sortable]="true"></p-column>
+
+                <p-column field="valor" header="Valor"></p-column> 
+              </p-dataTable>
+
+            </div>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col col-12 col-sm-12 col-md-4 col-lg-4>
+          <div class="card">
+              <div class="card-header card-header-icon" data-background-color="red">
+                <i class="fa fa-table" aria-hidden="true"></i>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Contactos</h4>
+                <div class="table-responsive">
+                    <div id="pie1"></div>
+                </div>
+              </div>
+            </div>
+        
+      </ion-col>
+
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

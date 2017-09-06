@@ -1,0 +1,95 @@
+<ion-header>
+    <ion-navbar>
+        <ion-navbar>
+            <ion-buttons end>
+                <button ion-button outline color="danger" (click)="cerrarModal()">Cerrar</button>
+
+            </ion-buttons>
+            <ion-buttons start>
+                <ion-toggle *ngIf="!esNuevo" pTooltip="Habilitar edicion" [(ngModel)]="modificacionActiva"></ion-toggle>
+            </ion-buttons>
+            <ion-title>Evento {{titulo}} </ion-title>
+
+        </ion-navbar>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <div class="col-md-12 ">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <label class="col-md-3 label-on-left">Fecha de inicio</label>
+                                <div class="col-md-9">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <p-calendar [(ngModel)]="fechainicio"  [utc]="true" dataType="string" [showTime]="true"></p-calendar>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3 label-on-left">Fecha fin</label>
+                                <div class="col-md-9">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <p-calendar [(ngModel)]="fechafin" [utc]="true" dataType="string" [showTime]="true"></p-calendar>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <label class="col-md-3 label-on-left">Titulo</label>
+                                <div class="col-md-9">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" class="form-control"  [(ngModel)]="titulo"> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3 label-on-left">Descripcion</label>
+                                <div class="col-md-9">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" class="form-control"  [(ngModel)]="descripcion">  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3 label-on-left">Todo el dia?</label>
+                                <div class="col-md-9">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <ion-toggle [(ngModel)]="allDay"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <label class="col-md-3"></label>
+                                <div class="col-md-9">
+                                    <div class="form-group form-button">
+                                        <button ion-button outline color="secondary" (click)='save()'>Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </ion-row>
+    </ion-grid>
+
+
+
+
+
+
+
+
+
+
+</ion-content>

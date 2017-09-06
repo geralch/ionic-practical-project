@@ -1,0 +1,28 @@
+page-geralprueba {
+    .scroll-content {
+        background-color: rgb(238, 238, 238);
+    }
+    .cat button {
+        background-color: #B2D86F !important;
+        color: black !important;
+        border-color: transparent;
+    }
+    .cat button:hover {
+        background-color: #8CAB56 !important;
+        color: black !important;
+        border-color: transparent;
+    }
+    .cat button .selected {
+        background-color: #69833C !important;
+        color: black !important;
+        border-color: transparent;
+    }
+    .cat button:focus {
+        background-color: #69833C !important;
+        color: black !important;
+        border-color: transparent !important;
+    }
+    .cat button:selection {
+        border-color: transparent !important;
+    }
+}

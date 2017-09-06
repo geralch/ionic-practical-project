@@ -1,0 +1,31 @@
+<ion-content padding>
+
+    <ion-row>
+
+    </ion-row>
+    <div class="card">
+        <div class="card-header card-header-icon" data-background-color="red">
+            <i class="fa fa-table" aria-hidden="true"></i>
+        </div>
+
+        <div class="card-content">
+            <h4 class="card-title">Clientes
+                <button class="btn btn-nuevo-listas" (click)='openModal()'>Nuevo</button>
+            </h4>
+            <div class="table-responsive">
+                <p-dataTable #dt [value]="users" selectionMode="single" [responsive]="true" [(selection)]="usuarioSelected" (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event,0)" dataKey="username">
+                    <p-column field="username" header="Nombre " [sortable]="true"></p-column>
+                    <p-column field="estado" header="Cargo " [sortable]="true"></p-column>
+                    <p-column field="nombres" header="Cliente"></p-column>
+                    <p-column field="apellidos" header="Tel. oficina "></p-column>
+                    <p-column field="apoyo" header="Usuario" [sortable]="true"></p-column>
+                    <p-column field="address" header="Calle de dirección principal"></p-column>
+                </p-dataTable>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</ion-content>
