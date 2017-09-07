@@ -26,7 +26,8 @@ export class GeralpruebaPage {
 
   private selectedCat;
   private selectedCatEdit;
-  private edit_new;
+  private edit_new = "bolt";
+  private nuevo_gato
 
   private cats: any[] = [
     {
@@ -58,12 +59,20 @@ export class GeralpruebaPage {
   onSelect(cat){
 
     this.selectedCat  = cat;
+    this.edit_new = "bolt";
     this.selectedCatEdit = null;
   }
 
   editCat(cat){
     this.selectedCatEdit = cat;
+    this.nuevo_gato = null;    
     this.edit_new = "pencil";
     console.log(cat)
+  }
+
+  newCat(){
+    this.selectedCatEdit = null;    
+    this.nuevo_gato = "gato";
+    this.edit_new = "plus";    
   }
 }

@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-content">
                     <h4 class="card-title">Cats
-                        <button class="btn btn-primary btn-fab btn-fab-mini btn-round btn-nuevo-listas ">
+                        <button class="btn btn-primary btn-fab btn-fab-mini btn-round btn-nuevo-listas " (click)="newCat()">
                             <i class="fa fa-plus"></i></button>
                     </h4>
                     <div *ngFor="let cat of cats" class="col-md-2 cat">
@@ -47,7 +47,7 @@
         <div class="col-md-12">
             <div class="card" padding>
                 <div class="card-header card-header-icon" data-background-color="red">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <i class="fa fa-{{edit_new}}" aria-hidden="true"></i>
                 </div>
                 <div *ngIf="selectedCatEdit" class="card-content">
                     <h4 class="card-title">Edicion de {{selectedCatEdit.nombre}}
@@ -68,6 +68,34 @@
                         <ion-label>Edad</ion-label>
                         <ion-input [(ngModel)]="selectedCatEdit.edad" type="text"></ion-input>
                     </ion-item>
+                </div>
+
+                <div *ngIf="nuevo_gato" class="card-content">
+                    <h4 class="card-title">Nuevo Gato
+                    </h4>
+                    <ion-item>
+                        <ion-label>Nombre</ion-label>
+                        <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Genero</ion-label>
+                        <ion-input [(ngModel)]="genero" type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Color</ion-label>
+                        <ion-input [(ngModel)]="color" type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Edad</ion-label>
+                        <ion-input [(ngModel)]="edad" type="text"></ion-input>
+                    </ion-item>
+                    <div>
+                        <button class="btn btn-primary btn-fab btn-fab-mini btn-round btn-nuevo-listas ">
+                            <i class="fa fa-floppy-o"></i></button>
+                        <button class="btn btn-primary btn-fab btn-fab-mini btn-round btn-nuevo-listas ">
+                            <i class="fa fa-ban"></i></button>
+                    </div>
+
                 </div>
             </div>
         </div>
